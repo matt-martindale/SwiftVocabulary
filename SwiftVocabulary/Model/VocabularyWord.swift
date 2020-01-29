@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  VocabularyWord.swift
 //  SwiftVocabulary
 //
 //  Created by Matthew Martindale on 1/28/20.
@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct VocabularyWord {
+    var word: String
+    var definition: String
+}

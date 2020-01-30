@@ -46,6 +46,7 @@ class WordsTableViewController: UITableViewController {
             //create new instance of VocabularyWord struct and pass in new text fields
             let vocabWord = VocabularyWord(word: word, definition: definition)
             self.vocabWords.append(vocabWord)
+            self.tableView.reloadData()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -54,6 +55,7 @@ class WordsTableViewController: UITableViewController {
         [saveAction, cancelAction].forEach { alertController.addAction($0) }
         
         present(alertController, animated: true)
+        
         
     
     }

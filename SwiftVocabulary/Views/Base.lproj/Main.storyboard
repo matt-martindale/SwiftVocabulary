@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Words Table View Controller-->
+        <!--Words-->
         <scene sceneID="W8t-ew-4gr">
             <objects>
                 <tableViewController id="0FY-3i-2tO" customClass="WordsTableViewController" customModule="SwiftVocabulary" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,9 +21,9 @@
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DYP-oM-xpM">
                             <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="Add Word"/>
                             <connections>
-                                <action selector="button:" destination="0FY-3i-2tO" eventType="touchUpInside" id="mWO-5q-piI"/>
+                                <action selector="addWordTapped:" destination="0FY-3i-2tO" eventType="touchUpInside" id="mWO-5q-piI"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -53,7 +53,7 @@
                             <outlet property="delegate" destination="0FY-3i-2tO" id="yW9-tM-tIr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="e0j-yd-wif"/>
+                    <navigationItem key="navigationItem" title="Words" id="e0j-yd-wif"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftW-Rg-6PL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,13 +68,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCs-EE-d6C">
-                                <rect key="frame" x="186" y="136" width="42" height="21"/>
+                                <rect key="frame" x="186" y="188" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LjV-N8-11V">
-                                <rect key="frame" x="65" y="207" width="284" height="327"/>
+                                <rect key="frame" x="65" y="259" width="284" height="275"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -107,8 +107,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DEq-Z3-vt5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fdS-m3-LUk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="fdS-m3-LUk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

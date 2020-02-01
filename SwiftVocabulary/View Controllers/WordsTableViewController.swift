@@ -20,30 +20,30 @@ class WordsTableViewController: UITableViewController {
     
     
     //create alertController to display alert and text input fields
-    @IBAction func button(_ sender: UIButton) {
-        //create alert controller
+    @IBAction func addWordTapped(_ sender: UIButton) {
+
         let alertController = UIAlertController(title: "Add word", message: nil, preferredStyle: .alert)
-        //create text field to add word
+
         alertController.addTextField { (addWordTextField) in
             addWordTextField.placeholder = "Add word"
             addWordTextField.keyboardType = .URL
         }
-        //create text field to add definition
+
         alertController.addTextField { (addDefinitionTextField) in
             addDefinitionTextField.placeholder = "Add definition"
             addDefinitionTextField.keyboardType = .URL
         }
         
-        //add text into vocabwords array
+
         let saveAction = UIAlertAction(title: "Save", style: .default) { (alertAction) in
             
-            //check to make sure text fields aren't empty
+
             guard let word = alertController.textFields![0].text,
                 let definition = alertController.textFields![1].text,
                 !word.isEmpty,
                 !definition.isEmpty else { return }
             
-            //create new instance of VocabularyWord struct and pass in new text fields
+
             let vocabWord = VocabularyWord(word: word, definition: definition)
             self.vocabWords.append(vocabWord)
             self.tableView.reloadData()
@@ -51,7 +51,6 @@ class WordsTableViewController: UITableViewController {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        //present alert
         [saveAction, cancelAction].forEach { alertController.addAction($0) }
         
         present(alertController, animated: true)

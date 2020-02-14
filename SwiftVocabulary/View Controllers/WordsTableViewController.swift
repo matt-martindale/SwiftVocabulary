@@ -50,9 +50,7 @@ class WordsTableViewController: UITableViewController {
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
         [saveAction, cancelAction].forEach { alertController.addAction($0) }
-        
         present(alertController, animated: true)
         
         
